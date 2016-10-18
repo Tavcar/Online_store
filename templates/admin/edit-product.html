@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit-product</title>
+</head>
+<body>
+
+    <h2>Edit product</h2>
+
+    <form action="/edit-product/{{ product.key.id() }}" method="post">
+            <p>Name:</p><input name="name" value="{{ product.name }}">
+            <p>Year:</p><input name="year" value="{{ product.year }}">
+            <p>Genre:</p><input name="genre" value="{{ product.genre }}">
+            <p>Price:</p><input name="price" value="{{ product.price }}">
+            <p>Image (URL):</p><input name="image" value="{{ product.image }}">
+            <p>Text:</p><input name="text" value="{{ product.text }}">
+            <br>
+
+            <button type="submit">Confirm</button>
+    </form>
+
+</body>
+</html>
