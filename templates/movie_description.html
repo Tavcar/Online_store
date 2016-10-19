@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{movie.name}} - BLURTZ</title>
+    <link type="text/css" rel="stylesheet" href="/assets/css/style.css">
+    <link type="image/x-icon" rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Rock+Salt">
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo-placeholder">
+        <h1>BLURTZ</h1>
+        <h4>This is sirius business.</h4>
+      </div>
+      <a href="#"><div id="main-page">
+        <p>Main Page</p>
+      </div></a>
+<!--  {% if user.login %}
+      <a href="#"><div id="login-logout">
+        <p>Logout</p>
+      </div></a>
+      <div id="welcome">
+        <p>Welcome, <a href="#">{{ user.username }}</a>.</p>
+      </div>
+      <a href="#"><div id="shopping-cart">
+        <img src="images/cart.png">
+      </div></a>
+      
+      {% else %} -->
+      <a href="#"><div id="login-logout">
+        <p>Login</p>
+      </div></a>
+      <div id="welcome">
+        <p>Welcome, random stranger.</p>
+      </div>
+      <a href="#"><div id="shopping-cart">
+        <img src="/assets/images/cart.png">
+      </div></a>
+<!--  {% endif %} -->
+
+    </div>
+    <div id="main">
+      <div class="ads">
+        <a href="#"><img src="/assets/images/advertisement.png"></a>
+      </div>
+      <div id="content">
+        <div id="left-side">
+          <br>
+<!--      <img src="{{ movie.medium_image_path }}"> -->
+          <img src="/assets/images/jupiter_ascending_m.png"> <!-- EXAMPLE -->
+<!--      <p>{{ movie.price }}</p> -->
+          <p>$7.99</p> <!-- EXAMPLE -->
+          <div id="icons">
+            <a href="#"><div>
+              <img src="/assets/images/previous.png">
+            </div></a>
+            <form method="post" action="/cart" id="add-to-cart-form"> <!-- BACK-END -->
+              <a href="#"><div>
+                <img src="/assets/images/add_to_cart.png">
+              </div></a>
+            </form>
+            <a href="#"><div>
+              <img src="/assets/images/next.png">
+            </div></a>
+          </div>
+        </div>
+        <div id="right-side">
+<!--        <h1>{{ movie.title }} -->
+            <h1>JUPITER ASCENDING</h1> <!-- EXAMPLE -->
+<!--        <p>{{ movie.description }}</p> -->
+            <p>Jupiter Jones was born under a night sky, with signs predicting that she was destined for great things. Now grown, Jupiter dreams of the stars but wakes up to the cold reality of a job cleaning other people's houses and an endless run of bad breaks. Only when Caine Wise, a genetically engineered ex-military hunter, arrives on Earth to track her down does Jupiter begin to glimpse the fate that has been waiting for her all along - her genetic signature marks her as next in line for an extraordinary inheritance that could alter the balance of the cosmos.</p> <!-- EXAMPLE -->          
+        </div>
+      </div>
+      <div class="ads" id="right">
+        <a href="#"><img src="/assets/images/advertisement.png"></a>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="address">
+        <p>BLURTZ - Online Movie Marketing<br>
+        1932 Lodgeville Road<br>
+        Jamestown<br>
+        Rhode Island<br>
+        02835<br>
+        Phone: 612-303-7435</p>
+      </div>
+      <div id="copyright">
+        <p>&copy; 2016 Blurtz</p>
+      </div>
+      <div id="faq">
+        <a href="#">About Us</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+        <a href="#">Employment</a>
+      </div>
+    </div>
+  </body>
+</html>
