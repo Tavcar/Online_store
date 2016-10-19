@@ -92,11 +92,11 @@ p {
     float: left;
     font-weight: bold;
     margin-top: 0.5em;
-    margin-left: 2em;
+    margin-left: 1.8em;
     text-align: center;
     width: 7em;
     height: 18.7em;
-    font-size: 1.5em;
+    font-size: 1.65em;
     line-height: 1.5em;
     position: fixed;
 }
@@ -236,7 +236,46 @@ p {
 }
 
 /* ADMIN_PAGE.HTML */
-#new {
-    height: 41.4em;
-    
+#top {
+    position: fixed;
+    height: 3em;
+    width: inherit;
+    border-bottom: 0.5em solid black;
+    background-color: white;
+}
+
+.top-button {
+    height: 2.5em;
+    width: 49.8%;
+    font-weight: bold;
+    line-height: 0px;
+    font-size: 1.2em;
+}
+
+.cubicle {
+    width: 11em;
+    height: 19em;
+    border: 0.2em solid black;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-left: 0.4em;
+}
+
+.cubicle img {
+    width: 10em;
+}
+
+.cubicle p {
+    margin-top: 0em;
+    height: 2em;
+}
+
+.cubicle form {
+    display: inline-block;
+}
+
+.cubicle button {
+    width: 5.5em;
+    font-weight: bold;
 }
