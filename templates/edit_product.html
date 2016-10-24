@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ product.name }} - edit</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+  </head>
+  <body id="new-product">
+    <div id="top">
+      <button class="top-button">ADMIN DASHBOARD</button>
+      <button class="top-button">MANAGING ORDERS</button>
+    </div>
+    <br><br><br>    
+    <h2>EDIT PRODUCT</h2>
+    <form action="/edit-product/{{ product.key.id() }}" method="post" id="new-product">
+      <div class="info-holder">
+        <p>Name: <br> <input name="name" value="{{ product.name }}" maxlength="35" required></p>
+        <p>Year: <br> <input name="year" value="{{ product.year }}" maxlength="4" required></p>
+        <p>Genre: <br> <input name="genre" value="{{ product.genre }}" required></p>
+        <p>Price: <br> <input name="price" value="{{ product.price }}" maxlength="7" required></p>
+        <p>Image URL Path: <br> <input name="image" value="{{ product.image }}" required></p>
+      </div>
+      <div class="info-holder">
+          <p>Description: <br> <textarea name="text" maxlength="720" required>{{ product.text }}</textarea></p>
+      </div>
+      <br><br>
+      <button id="submit" type="submit">CHANGE INFO</button>
+    </form>
+    <br><br>
+</body>
+</html>
