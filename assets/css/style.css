@@ -279,3 +279,40 @@ p {
     width: 5.5em;
     font-weight: bold;
 }
+
+#new-product {
+    text-align: center;
+}
+
+/* ADD_PRODUCT.HTML */
+#new-product p {
+    font-size: 2em;
+    text-align: left;
+    font-weight: bold;
+}
+
+#new-product input {
+    font-size: 1em;
+    width: 17em;
+}
+
+#new-product .info-holder {
+    display: inline-block;
+}
+
+.info-holder textarea {
+    font-size: 1em;
+    width: 17em;
+    height: 18em;
+    max-width: 17em;
+    max-height: 18em;
+}
+
+#new-product #submit {
+    font-size: 2em;
+    font-weight: bold;
+    width: 25em;
+    height: 2em;
+    border-radius: 0.3em;
+    box-shadow: 0em 0em 0.5em 0.1em gray;
+}
