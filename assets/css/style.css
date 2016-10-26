@@ -26,20 +26,11 @@ h4 {
     margin-top: -2em;
 }
 
-p {
-    font-family: "Montserrat", sans-serif;
+a {
+    text-decoration: none;
 }
 
-#welcome {
-    display: inline-block;
-    font-family: "Montserrat", sans-serif;
-    float: right;
-    margin-right: 5em;
-    margin-top: 4.9em;
-    line-height: 0em;
-}
-
-#login-logout {
+.nav-button {
     border: 1px solid black;
     display: inline-block;
     padding: 0em 1em;
@@ -49,72 +40,59 @@ p {
     background-color: aliceblue;
     font-size: 0.8em;
     margin-top: 6%;
-    float: right;
-    margin-right: 7%;
+    margin-right: 2em;
     color: black;
 }
 
-#shopping-cart {
-    border: 1px solid black;
-    display: inline-block;
-    border-radius: 0.5em;
-    padding: 0.7em;
-    background-color: aliceblue;
-    margin-top: -5.75%;
-    float: right;
-    clear: right;
-    margin-right: 1%;
-}
-
-#login-logout:hover, #shopping-cart:hover {
+.nav-button:hover {
     background-color: #80b6ea;
 }
 
-#main {
-    height: 42em;
-
+#special-nav-button {
+    float: right;
+    margin-right: 1em;
+    margin-top: -2.4em;
 }
 
-.ads {
-    margin: 1em 0.5em;
-    display: inline-block;
-}
-
-#content {
-    position: absolute;
-    display: inline-block;
-    height: 42em;
-    width: 62em;
+p {
     font-family: "Montserrat", sans-serif;
 }
 
-#navlinks {
+#main {
+    width: inherit;
+}
+
+.ads {
+    margin-top: 1em;
+    display: inline-block;
     float: left;
-    font-weight: bold;
-    margin-top: 0.5em;
-    margin-left: 1.8em;
+}
+
+#content {
+    display: inline-block;
+    width: 62em;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 1em;
     text-align: center;
-    width: 7em;
-    height: 18.7em;
-    font-size: 1.65em;
-    line-height: 1.5em;
-    position: fixed;
 }
 
-#navlinks a {
-    text-decoration: none;
-    color: black;
+#filtering {
+    text-align: center;
+    font-size: 1.5em;
 }
 
-#navlinks a:hover {
-    color: #80b6ea;
+#filtering > p {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#filter-search {
+    margin-top: 0em;
 }
 
 #movies {
-    float: right;
-    margin-right: 1em;
-    height: 41.3em;
-    width: 43.3em;
+    width: inherit;
+    text-align: center;
 }
 
 #movies img {
@@ -128,7 +106,6 @@ p {
 
 #right {
     float: right;
-    margin-right: -5em;
 }
 
 #footer {
@@ -158,7 +135,6 @@ p {
 }
 
 #faq a {
-    text-decoration: none;
     color: black;
     margin-left: 1em;
 }
@@ -168,21 +144,9 @@ p {
 }
 
 /* MOVIE_DESCRIPTION.HTML */
-#main-page {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 0em 1em;
-    border-radius: 0.5em;
-    text-align: center;
-    line-height: 0.3em;
-    background-color: aliceblue;
-    font-size: 0.8em;
-    margin-top: 6%;
-    color: black;
-}
-
-#main-page:hover {
-    background-color: #80b6ea;
+#special-nav-button-2 {
+    float: right;
+    margin-right: 1em;
 }
 
 #left-side {
@@ -325,4 +289,24 @@ p {
     box-shadow: 0em 0em 0.5em 0.1em gray;
     height: 2em;
     width: 13em;
+}
+
+/* USER_PAGE.HTML */
+#no-login {
+    font-size: 37em;
+}
+
+table {
+    text-align: center;
+    margin: 0em auto;
+    font-size: 1.5em;
+}
+
+table input {
+    font-size: 1.2em;
+    height: 1.5em;
+    width: 17.5em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    text-align: center;
 }
