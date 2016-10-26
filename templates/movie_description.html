@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{movie.name}} - BLURTZ</title>
-    <link type="text/css" rel="stylesheet" href="/assets/css/style.css">
-    <link type="image/x-icon" rel="shortcut icon" href="/assets/images/favicon.ico">
+    <title>{{product.name}} - BLURTZ</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Rock+Salt">
   </head>
   <body>
@@ -12,69 +12,91 @@
         <h1>BLURTZ</h1>
         <h4>This is sirius business.</h4>
       </div>
-      <a href="#"><div id="main-page">
+       <a href="#">
+      <div class="nav-button">
         <p>Main Page</p>
-      </div></a>
-<!--  {% if user.login %}
-      <a href="#"><div id="login-logout">
+      </div>
+    </a>
+    <!-- {% if user %} -->
+    <a href="#">
+      <div class="nav-button">
+        <p>Shopping Cart</p>
+      </div>
+    </a>
+        <a href="#">
+      <div class="nav-button">
+        <p>User Options</p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="nav-button">
+        <p>History</p>
+      </div>
+    </a>
+    <!-- {% if user.admin %} -->
+    <a href="#">
+      <div class="nav-button">
+        <p>Admin Dashboard</p>
+      </div>
+    </a>
+    <!-- {% endif %} -->
+    <!-- {% endif %} -->
+    <!-- {% if user %}
+    <a href="#">
+      <div class="nav-button" id="special-nav-button-2">
         <p>Logout</p>
-      </div></a>
-      <div id="welcome">
-        <p>Welcome, <a href="#">{{ user.username }}</a>.</p>
       </div>
-      <a href="#"><div id="shopping-cart">
-        <img src="images/cart.png">
-      </div></a>
-      
-      {% else %} -->
-      <a href="#"><div id="login-logout">
+    </a> -->
+    <!-- {% else %} -->
+    <a href="#">
+      <div class="nav-button" id="special-nav-button-2">
         <p>Login</p>
-      </div></a>
-      <div id="welcome">
-        <p>Welcome, random stranger.</p>
       </div>
-      <a href="#"><div id="shopping-cart">
-        <img src="/assets/images/cart.png">
-      </div></a>
-<!--  {% endif %} -->
-
+    </a>
     </div>
     <div id="main">
       <div class="ads">
-        <a href="#"><img src="/assets/images/advertisement.png"></a>
+        <a href="#"><img src="images/advertisement.png"></a>
       </div>
       <div id="content">
         <div id="left-side">
           <br>
-<!--      <img src="{{ movie.medium_image_path }}"> -->
-          <img src="/assets/images/jupiter_ascending_m.png"> <!-- EXAMPLE -->
-<!--      <p>{{ movie.price }}</p> -->
-          <p>$7.99</p> <!-- EXAMPLE -->
+          <!-- <img src="{{ product.image }}"> -->
+          <img src="images/jupiter_ascending_m.png">
+          <!-- <p>{{ product.price }}</p> -->
+          <p>$7.99</p>
           <div id="icons">
-            <a href="#"><div>
-              <img src="/assets/images/previous.png">
-            </div></a>
-            <form method="post" action="/cart" id="add-to-cart-form"> <!-- BACK-END -->
+            <a href="#">
+              <div>
+                <img src="images/previous.png">
+              </div>
+            </a>
+            <!-- {% if user %} -->
+            <form method="post" action="/cart" id="add-to-cart-form">
               <a href="#"><div>
-                <img src="/assets/images/add_to_cart.png">
+                <img src="images/add_to_cart.png">
               </div></a>
             </form>
+            <!-- {% endif %} -->
             <a href="#"><div>
-              <img src="/assets/images/next.png">
+              <img src="images/next.png">
             </div></a>
           </div>
         </div>
         <div id="right-side">
-<!--        <h1>{{ movie.title }} -->
-            <h1>JUPITER ASCENDING</h1> <!-- EXAMPLE -->
-<!--        <p>{{ movie.description }}</p> -->
-            <p>Jupiter Jones was born under a night sky, with signs predicting that she was destined for great things. Now grown, Jupiter dreams of the stars but wakes up to the cold reality of a job cleaning other people's houses and an endless run of bad breaks. Only when Caine Wise, a genetically engineered ex-military hunter, arrives on Earth to track her down does Jupiter begin to glimpse the fate that has been waiting for her all along - her genetic signature marks her as next in line for an extraordinary inheritance that could alter the balance of the cosmos.</p> <!-- EXAMPLE -->          
+          <!-- <h1>{{ product.name }} -->
+          <h1>JUPITER ASCENDING</h1>
+          <!-- <p>{{ product.text }}</p> -->
+          <p>Jupiter Jones was born under a night sky, with signs predicting that she was destined for great things. Now grown, Jupiter dreams of the stars but wakes up to the cold reality of a job cleaning other people's houses and an endless run of bad breaks. Only when Caine Wise, a genetically engineered ex-military hunter, arrives on Earth to track her down does Jupiter begin to glimpse the fate that has been waiting for her all along - her genetic signature marks her as next in line for an extraordinary inheritance that could alter the balance of the cosmos.</p>
         </div>
       </div>
       <div class="ads" id="right">
-        <a href="#"><img src="/assets/images/advertisement.png"></a>
+        <a href="#">
+          <img src="images/advertisement.png">
+        </a>
       </div>
     </div>
+    <br>
     <div id="footer">
       <div id="address">
         <p>BLURTZ - Online Movie Marketing<br>
