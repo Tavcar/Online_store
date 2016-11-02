@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order history</title>
+</head>
+<body>
+
+<!-- List/seznam spodaj ne vem tocno kako naj klicem lastnosti produktov, ki so v narocilu (order)
+-->
+
+<h2>Order history</h2>
+
+{% for order in history_list %}
+    <div class="uh-order">
+        <div class="uh-order-product">
+            {% for product in order %}
+                <p>{{ product.name }}   {{ product.price }} </p>
+            {% endfor %}
+        </div>
+        <p>{{ order.total }}</p>
+        <div class="uh-order-address">
+            <p>{{ order.customer.full_name }}{{ order.customer.email }}</p>
+            <p>{{ order.customer.address_line_1 }}, {{ order.customer.address_line_2 }}</p>
+            <p>{{ order.customer.zip_number}} {{ order.customer.city }}, {{ order.customer.country }}</p>
+        </div>
+    </div>
+{% endfor %}
+
+
+</body>
+</html>
