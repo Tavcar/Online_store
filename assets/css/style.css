@@ -74,6 +74,7 @@ p {
     font-family: "Montserrat", sans-serif;
     margin-left: 1em;
     text-align: center;
+    min-height: 39em;
 }
 
 #filtering {
@@ -98,6 +99,7 @@ p {
 #movies img {
     border-radius: 20px;
     border: 0.3em solid black;
+    width: 14em;
 }
 
 #movies img:hover {
@@ -292,10 +294,6 @@ p {
 }
 
 /* USER_PAGE.HTML */
-#no-login {
-    font-size: 37em;
-}
-
 table {
     text-align: center;
     margin: 0em auto;
