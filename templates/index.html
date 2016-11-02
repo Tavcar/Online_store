@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <title>BLURTZ - stop, shop &amp; watch</title>
-    <link type="text/css" rel="stylesheet" href="/assets/css/style.css">
-    <link type="image/x-icon" rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Rock+Salt"> 
   </head>
   <body>
@@ -11,47 +11,107 @@
       <div id="logo-placeholder">
         <h1>BLURTZ</h1>
         <h4>This is sirius business.</h4>
+    </div>
+    <a href="#">
+      <div class="nav-button">
+        <p>Main Page</p>
       </div>
-      <a href="#"><div id="login-logout">
+    </a>
+    <!-- {% if user %} -->
+    <a href="#">
+      <div class="nav-button">
+        <p>Shopping Cart</p>
+      </div>
+    </a>
+        <a href="#">
+      <div class="nav-button">
+        <p>User Options</p>
+      </div>
+    </a>
+    <a href="#">
+      <div class="nav-button">
+        <p>History</p>
+      </div>
+    </a>
+    <!-- {% if user.admin %} -->
+    <a href="#">
+      <div class="nav-button">
+        <p>Admin Dashboard</p>
+      </div>
+    </a>
+    <!-- {% endif %} -->
+    <!-- {% endif %} -->
+    <!-- {% if user %}
+    <a href="#">
+      <div class="nav-button" id="special-nav-button">
+        <p>Logout</p>
+      </div>
+    </a> -->
+    <!-- {% else %} -->
+    <a href="#">
+      <div class="nav-button" id="special-nav-button">
         <p>Login</p>
-      </div></a>
-      <div id="welcome">
-        <p>Welcome, random stranger.</p>
       </div>
-      <a href="#"><div id="shopping-cart">
-        <img src="/assets/images/cart.png">
-      </div></a>
+    </a>
     </div>
     <div id="main">
       <div class="ads">
-        <a href="#"><img src="/assets/images/advertisement.png"></a>
+        <a href="#"><img src="images/advertisement.png"></a>
       </div>
       <div id="content">
-        <div id="navlinks">
-          <a href="#">ACTION</a><br>
-          <a href="#">ADVENTURE</a><br>
-          <a href="#">COMEDY</a><br>
-          <a href="#">CRIME</a><br>
-          <a href="#">DRAMA</a><br>
-          <a href="#">HISTORICAL</a><br>
-          <a href="#">HORROR</a><br>
-          <a href="#">MUSICALS</a><br>
-          <a href="#">SCI-FI</a><br>
-          <a href="#">WAR</a><br>
-          <a href="#">WESTERNS</a><br>
-        </div>
+        <form id="filtering">
+          <p>Filter movies by genre:
+            <select>
+              <option>All of them</option>
+              <option value="action">Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="comedy">Comedy</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="horror">Horror</option>
+              <option value="sci-fi">Sci-Fi</option>
+            </select>
+          </p>
+          <p>Filter movies by year:
+            <select>
+              <option>All of them</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+            </select>
+          </p>
+          <a href="#">
+            <button type="submit" class="nav-button" id="filter-search">
+              <p>Search</p>
+            </button>
+          </a>
+        </form>
         <div id="movies">
-          <br>
-          <!--<a href="#" target="_blank"><img src="/assets/images/suicide_squad_s.png"></a>
-          <a href="#" target="_blank"><img src="/assets/images/zootopia_s.png"></a>
-          <a href="#" target="_blank"><img src="/assets/images/the_angry_birds_movie_s.png"></a>
-          <a href="#" target="_blank"><img src="/assets/images/krampus_s.png"></a>
-          <a href="#" target="_blank"><img src="/assets/images/jupiter_ascending_s.png"></a>
-          <a href="#" target="_blank"><img src="/assets/images/the_pursuit_of_happyness_s.png"></a>-->
+          <a href="#">
+            <img src="images/suicide_squad.png">
+          </a>
+          <a href="#">
+            <img src="images/zootopia.png">
+          </a>
+          <a href="#">
+            <img src="images/the_angry_birds_movie.png">
+          </a>
+          <a href="#">
+            <img src="images/krampus.png">
+          </a>
+          <a href="#">
+            <img src="images/jupiter_ascending.png">
+          </a>
+          <a href="#">
+            <img src="images/the_pursuit_of_happyness.png">
+          </a>
         </div>
       </div>
       <div class="ads" id="right">
-        <a href="#"><img src="/assets/images/advertisement.png"></a>
+        <a href="#"><img src="images/advertisement.png"></a>
       </div>
     </div>
     <div id="footer">
