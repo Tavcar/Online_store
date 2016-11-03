@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{product.name}} - BLURTZ</title>
+    <title>User Options - BLURTZ</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Rock+Salt">
@@ -23,7 +23,7 @@
         <p>Shopping Cart</p>
       </div>
     </a>
-        <a href="#">
+    <a href="#">
       <div class="nav-button">
         <p>User Options</p>
       </div>
@@ -49,7 +49,7 @@
     </a> -->
     <!-- {% else %} -->
     <a href="#">
-      <div class="nav-button" id="special-nav-button-2">
+      <div class="nav-button" id="special-nav-button">
         <p>Login</p>
       </div>
     </a>
@@ -59,36 +59,46 @@
         <a href="#"><img src="images/advertisement.png"></a>
       </div>
       <div id="content">
-        <div id="left-side">
-          <br>
-          <!-- <img src="{{ product.image }}"> -->
-          <img src="images/jupiter_ascending.png">
-          <!-- <p>{{ product.price }}</p> -->
-          <p>$7.99</p>
-          <div id="icons">
-            <a href="#">
-              <div>
-                <img src="images/previous.png">
-              </div>
-            </a>
-            <!-- {% if user %} -->
-            <form method="post" action="/cart" id="add-to-cart-form">
-              <a href="#"><div>
-                <img src="images/add_to_cart.png">
-              </div></a>
-            </form>
-            <!-- {% endif %} -->
-            <a href="#"><div>
-              <img src="images/next.png">
-            </div></a>
-          </div>
-        </div>
-        <div id="right-side">
-          <!-- <h1>{{ product.name }} -->
-          <h1>JUPITER ASCENDING</h1>
-          <!-- <p>{{ product.text }}</p> -->
-          <p>Jupiter Jones was born under a night sky, with signs predicting that she was destined for great things. Now grown, Jupiter dreams of the stars but wakes up to the cold reality of a job cleaning other people's houses and an endless run of bad breaks. Only when Caine Wise, a genetically engineered ex-military hunter, arrives on Earth to track her down does Jupiter begin to glimpse the fate that has been waiting for her all along - her genetic signature marks her as next in line for an extraordinary inheritance that could alter the balance of the cosmos.</p>
-        </div>
+        <!-- {% if user %} -->
+        <h1>Delivery Information</h1>
+        <form>
+          <table>
+            <tr>
+              <td>NAME: </td>
+              <td><input value="{{ user.name }}" placeholder="Enter your name." required></td>
+            </tr>
+            <tr>
+              <td>SURNAME: </td>
+              <td><input value="{{ user.surname }}" placeholder="Enter your surname." required></td>
+            </tr>
+            <tr>
+              <td>ADDRESS LINE 1: </td>
+              <td><input value="{{ user.address-line1 }}" placeholder="Enter your home address." required></td>
+            </tr>
+            <tr>
+              <td>ADDRESS LINE 2: </td>
+              <td><input value="{{ user.address-line2 }}" placeholder="Not required."></td>
+            </tr>
+            <tr>
+              <td>CITY: </td>
+              <td><input value="{{ user.city }}" placeholder="Enter your home city." required></td>
+            </tr>
+            <tr>
+              <td>ZIP CODE: </td>
+              <td><input value="{{ user.zipcode }}" placeholder="Enter your zip code." required></td>
+            </tr>
+            <tr>
+              <td>COUNTRY: </td>
+              <td><input value="{{ user.country }}" placeholder="Enter your home country." required></td>
+            </tr>
+          </table>
+          <button type="submit" class="nav-button">
+            <p>Accept Changes</p>
+          </button>
+        </form>
+        <!-- {% else %}
+          <p>You need to be logged in to access this site.</p>
+        {% endif %} -->
       </div>
       <div class="ads" id="right">
         <a href="#">
@@ -96,7 +106,6 @@
         </a>
       </div>
     </div>
-    <br>
     <div id="footer">
       <div id="address">
         <p>BLURTZ - Online Movie Marketing<br>
