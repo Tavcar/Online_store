@@ -59,23 +59,38 @@
         <a href="#"><img src="images/advertisement.png"></a>
       </div>
       <div id="content">
+        <br>
         <!-- {% if user %} -->
-        <!-- {% if user.receipts !== NULL %} -->
-        <table>
-          
-          
-          
-          
-          
-          
-          
-        </table>
-        <!-- {% for receipt in user.receipts %} -->
-        
-        <!-- {% endfor %} -->
-        <!-- {% else %}
-        <p>You didn't purchase anything yet.</p> -->
-        <!-- {% endif %} -->
+        <!-- {% for order in history_list %} -->
+        <div class="order-table">
+          <div class="order-products">
+            <!-- {% for product in order %}
+            <p>{{ product.name }} // ${{ product.price }}</p>
+            {% endfor %} -->
+            <p>JUPITER ASCENDING // $7.99</p>
+            <p>IN PURSUIT OF HAPPYNESS // $6.99 </p>
+            <p>ZOOTOPIA // $9.99</p>
+            <hr>
+            <!-- <p>TOTAL: ${{ order.total }}</p> -->
+            <p id="total-sum">TOTAL: $24.97</p>
+            
+          </div>
+          <div class="order-address">
+            <p>Sent to the following address:</p>
+            <hr>
+            <!-- <p>{{ order.customer.full_name }}<br>
+            {{ order.customer.address_line_1 }}<br>
+            {{ order.customer.address_line_2 }}<br>
+            {{ order.customer.city }}, {{ order.customer.zip_number }}<br>
+            {{ order.customer.country }}</p> -->
+            <p>Karen C. McFadden<br>
+            3110 Ritter Street<br>
+            Apartment Nr. 14<br>
+            Huntsville, AL 35816<br>
+            United States of America</p>         
+          </div>
+        </div>
+        <!-- {$ endfor $} -->
         <!-- {% else %}
         <p>You need to be logged in to access this site.</p>
         {% endif %} -->
