@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Managing Orders</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="top">
+      <button class="top-button">ADD NEW PRODUCT</button>
+      <button class="top-button">ADMIN DASHBOARD</button>
+    </div>
+    <br><br><br>
+    <div id="lower-top">
+      <button class="lower-top-button">IN PROGRESS</button>
+      <button class="lower-top-button">COMPLETED</button>
+    </div>
+    <br><br>
+    <!-- {% for order in history_list %} -->
+    <div class="admin-order-table">
+      <table class="admin-table">
+        <!-- {% for product in order %}
+        <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        </tr>
+        {% endfor %} -->
+        <tr>
+          <td>JUPITER ASCENDING</td>
+          <td>$7.99</td>
+        </tr>
+        <tr>
+          <td>IN PURSUIT OF HAPPYNESS</td>
+          <td>$6.99</td>
+        </tr>
+        <tr>
+          <td>ZOOTOPIA</td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td>ETERNAL SUNSHINE OF A SPOTLESS MIND</td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td>TOTAL COST</td>
+          <!-- <td>${{ order.total }}</td> -->
+          <td>$24.97</td>
+        </tr>
+      </table>
+      <div class="admin-order-address">
+        <!-- <p>{{ order.customer.full_name }}<br>
+        {{ order.customer.address_line_1 }}<br>
+        {{ order.customer.address_line_2 }}<br>
+        {{ order.customer.city }}, {{ order.customer.zip_number }}<br>
+        {{ order.customer.country }}<br>
+        E-MAIL: {{ order.customer.email }}</p> -->
+        <p>Karen C. McFadden<br>
+        3110 Ritter Street<br>
+        Apartment Nr. 14<br>
+        Huntsville, AL 35816<br>
+        United States of America<br>
+        E-MAIL: mcfadden@fakemail.com</p>        
+      </div>
+      
+      
+    </div>
+    <!-- {% endfor %} -->
+  </body>
+</html>
+    
+    
+    
+    
+<!-- 
+{% for order in history_list %}
+    <div class="uh-order">
+        <div class="uh-order-product">
+            {% for product in order %}
+                <p>{{ product.name }}   {{ product.price }} </p>
+            {% endfor %}
+        </div>
+        <p>{{ order.total }}</p>
+        <div class="uh-order-address">
+            <p>{{ order.customer.full_name }}{{ order.customer.email }}</p>
+            <p>{{ order.customer.address_line_1 }}, {{ order.customer.address_line_2 }}</p>
+            <p>{{ order.customer.zip_number}} {{ order.customer.city }}, {{ order.customer.country }}</p>
+            <p>Status: shipped-{{ order.shipped }}</p>
+            <div class="btn-group pull-right">
+                <a class="button-s" href="/shipping/{{ order.key.id() }}">Ship it</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+</body>
+</html> -->
