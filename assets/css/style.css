@@ -1,6 +1,6 @@
 /* INDEX.HTML */
 body {
-    width: 99.8%;
+    width: 1348px;
     margin: 0 auto;
 }
 
@@ -26,20 +26,11 @@ h4 {
     margin-top: -2em;
 }
 
-p {
-    font-family: "Montserrat", sans-serif;
+a {
+    text-decoration: none;
 }
 
-#welcome {
-    display: inline-block;
-    font-family: "Montserrat", sans-serif;
-    float: right;
-    margin-right: 5em;
-    margin-top: 4.9em;
-    line-height: 0em;
-}
-
-#login-logout {
+.nav-button {
     border: 1px solid black;
     display: inline-block;
     padding: 0em 1em;
@@ -49,77 +40,66 @@ p {
     background-color: aliceblue;
     font-size: 0.8em;
     margin-top: 6%;
-    float: right;
-    margin-right: 7%;
+    margin-right: 2em;
     color: black;
 }
 
-#shopping-cart {
-    border: 1px solid black;
-    display: inline-block;
-    border-radius: 0.5em;
-    padding: 0.7em;
-    background-color: aliceblue;
-    margin-top: -5.75%;
-    float: right;
-    clear: right;
-    margin-right: 1%;
-}
-
-#login-logout:hover, #shopping-cart:hover {
+.nav-button:hover {
     background-color: #80b6ea;
 }
 
-#main {
-    height: 42em;
-
+#special-nav-button {
+    float: right;
+    margin-right: 1em;
+    margin-top: -2.4em;
 }
 
-.ads {
-    margin: 1em 0.5em;
-    display: inline-block;
-}
-
-#content {
-    position: absolute;
-    display: inline-block;
-    height: 42em;
-    width: 62em;
+p {
     font-family: "Montserrat", sans-serif;
 }
 
-#navlinks {
+#main {
+    width: inherit;
+}
+
+.ads {
+    margin-top: 1em;
+    display: inline-block;
     float: left;
-    font-weight: bold;
-    margin-top: 0.5em;
-    margin-left: 2em;
+}
+
+#content {
+    display: inline-block;
+    width: 62em;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 1em;
     text-align: center;
-    width: 7em;
-    height: 18.7em;
+    min-height: 39em;
+}
+
+#filtering {
+    text-align: center;
     font-size: 1.5em;
-    line-height: 1.5em;
-    position: fixed;
 }
 
-#navlinks a {
-    text-decoration: none;
-    color: black;
+#filtering > p {
+    display: inline-block;
+    margin-right: 1em;
 }
 
-#navlinks a:hover {
-    color: #80b6ea;
+#filter-search {
+    margin-top: 0em;
 }
 
 #movies {
-    float: right;
-    margin-right: 1em;
-    height: 41.3em;
-    width: 43.3em;
+    width: inherit;
+    text-align: center;
 }
 
 #movies img {
     border-radius: 20px;
     border: 0.3em solid black;
+    width: 14em;
 }
 
 #movies img:hover {
@@ -128,7 +108,6 @@ p {
 
 #right {
     float: right;
-    margin-right: -5em;
 }
 
 #footer {
@@ -158,7 +137,6 @@ p {
 }
 
 #faq a {
-    text-decoration: none;
     color: black;
     margin-left: 1em;
 }
@@ -168,21 +146,9 @@ p {
 }
 
 /* MOVIE_DESCRIPTION.HTML */
-#main-page {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 0em 1em;
-    border-radius: 0.5em;
-    text-align: center;
-    line-height: 0.3em;
-    background-color: aliceblue;
-    font-size: 0.8em;
-    margin-top: 6%;
-    color: black;
-}
-
-#main-page:hover {
-    background-color: #80b6ea;
+#special-nav-button-2 {
+    float: right;
+    margin-right: 1em;
 }
 
 #left-side {
@@ -236,7 +202,179 @@ p {
 }
 
 /* ADMIN_PAGE.HTML */
-#new {
-    height: 41.4em;
-    
+#top {
+    position: fixed;
+    height: 3em;
+    width: inherit;
+    border-bottom: 0.5em solid black;
+    background-color: white;
+}
+
+.top-button {
+    height: 2.5em;
+    width: 35em;
+    font-weight: bold;
+    line-height: 0px;
+    font-size: 1.2em;
+}
+
+.cubicle {
+    width: 11em;
+    height: 19em;
+    border: 0.2em solid black;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-left: 0.4em;
+}
+
+.cubicle img {
+    width: 10em;
+}
+
+.cubicle p {
+    margin-top: 0em;
+    height: 2em;
+}
+
+.cubicle form {
+    display: inline-block;
+}
+
+.cubicle button {
+    width: 5.5em;
+    font-weight: bold;
+}
+
+#new-product {
+    text-align: center;
+}
+
+/* ADD_PRODUCT.HTML, EDIT_PRODUCT.HTML*/
+#new-product p {
+    font-size: 2em;
+    text-align: left;
+    font-weight: bold;
+}
+
+#new-product input {
+    font-size: 1em;
+    width: 17em;
+}
+
+#new-product .info-holder {
+    display: inline-block;
+}
+
+.info-holder textarea {
+    font-size: 1em;
+    width: 17em;
+    height: 18em;
+    max-width: 17em;
+    max-height: 18em;
+}
+
+#new-product #submit {
+    font-size: 2em;
+    font-weight: bold;
+    width: 25em;
+    height: 2em;
+    border-radius: 0.3em;
+    box-shadow: 0em 0em 0.5em 0.1em gray;
+}
+
+/* DELETE_PRODUCT.HTML */
+#new-product #delete {
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 0.3em;
+    box-shadow: 0em 0em 0.5em 0.1em gray;
+    height: 2em;
+    width: 13em;
+}
+
+/* USER_PAGE.HTML */
+table {
+    text-align: center;
+    margin: 0em auto;
+    font-size: 1.5em;
+}
+
+table input {
+    font-size: 1.2em;
+    height: 1.5em;
+    width: 17.5em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+/* USER_HISTORY.HTML */
+.order-table {
+    width: inherit;
+    border: 0.1em solid black;
+    border-radius: 1em;
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.order-table:hover {
+    border: 0.1em solid #80b6ea;
+}
+
+.order-products {
+    width: 23em;
+    text-align: left;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.order-products hr, .order-address hr {
+    color: black;
+    border: 0.3em solid black;
+}
+
+#total-sum {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -0.2em;
+}
+
+.order-address {
+    display: inline-block;
+    width: 26.5em;
+    text-align: center;
+}
+
+/* ADMIN_ORDERS.HTML */
+#lower-top {
+    margin: 0px auto;
+    position: fixed;
+    width: inherit;
+    text-align: center;
+}
+
+.lower-top-button {
+    width: 35em;
+    height: 2em;
+    font-weight: bold;
+}
+
+.admin-order-table {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.admin-table {
+    text-align: left;
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.admin-order-address {
+    font-size: 1.4em;
+    display: inline-block;
+    text-align: center;
 }
