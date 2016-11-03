@@ -1,6 +1,6 @@
 /* INDEX.HTML */
 body {
-    width: 99.8%;
+    width: 1348px;
     margin: 0 auto;
 }
 
@@ -212,7 +212,7 @@ p {
 
 .top-button {
     height: 2.5em;
-    width: 49.8%;
+    width: 35em;
     font-weight: bold;
     line-height: 0px;
     font-size: 1.2em;
@@ -306,5 +306,75 @@ table input {
     width: 17.5em;
     border: 1px solid black;
     border-radius: 0.5em;
+    text-align: center;
+}
+
+/* USER_HISTORY.HTML */
+.order-table {
+    width: inherit;
+    border: 0.1em solid black;
+    border-radius: 1em;
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.order-table:hover {
+    border: 0.1em solid #80b6ea;
+}
+
+.order-products {
+    width: 23em;
+    text-align: left;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.order-products hr, .order-address hr {
+    color: black;
+    border: 0.3em solid black;
+}
+
+#total-sum {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -0.2em;
+}
+
+.order-address {
+    display: inline-block;
+    width: 26.5em;
+    text-align: center;
+}
+
+/* ADMIN_ORDERS.HTML */
+#lower-top {
+    margin: 0px auto;
+    position: fixed;
+    width: inherit;
+    text-align: center;
+}
+
+.lower-top-button {
+    width: 35em;
+    height: 2em;
+    font-weight: bold;
+}
+
+.admin-order-table {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.admin-table {
+    text-align: left;
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.admin-order-address {
+    font-size: 1.4em;
+    display: inline-block;
     text-align: center;
 }
