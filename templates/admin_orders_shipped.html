@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Completed Orders</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="top">
+      <button class="top-button">ADD NEW PRODUCT</button>
+      <button class="top-button">ADMIN DASHBOARD</button>
+    </div>
+    <br><br><br>
+    <div id="lower-top">
+      <button class="lower-top-button">IN PROGRESS</button>
+      <button class="lower-top-button">COMPLETED</button>
+    </div>
+    <br><br>
+    <!-- {% for order in shipped_list %} -->
+    <div class="admin-order-table">
+      <table class="admin-table">
+        <!-- {% for product in order %}
+        <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        </tr>
+        {% endfor %} -->
+        <tr>
+          <td>KRAMPUS</td>
+          <td>$8.99</td>
+        </tr>
+        <tr>
+          <td><hr></td>
+          <td><hr></td>
+        </tr>
+        <tr>
+          <td>TOTAL COST</td>
+          <!-- <td>${{ order.total }}</td> -->
+          <td>$8.99</td>
+        </tr>
+      </table>
+      <div class="admin-order-address">
+        <!-- <p>{{ order.customer.full_name }}<br>
+        {{ order.customer.address_line_1 }}<br>
+        {{ order.customer.address_line_2 }}<br>
+        {{ order.customer.city }}, {{ order.customer.zip_number }}<br>
+        {{ order.customer.country }}<br>
+        E-MAIL: {{ order.customer.email }}</p> -->
+        <p>Josh Short<br>
+        19 Whatlington Street<br>
+        <br>
+        Cottenham, CB4 9XJ<br>
+        United Kingdom<br>
+        E-MAIL: JoshShort@jourrapide.com</p>        
+      </div>
+      <button class="shipped" disabled>SHIPPED SUCCESSFULLY</button>
+      <hr>
+    </div>
+    <div class="admin-order-table">
+      <table class="admin-table">
+        <!-- {% for product in order %}
+        <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        </tr>
+        {% endfor %} -->
+        <tr>
+          <td>IN PURSUIT OF HAPPYNESS</td>
+          <td>$6.99</td>
+        </tr>
+        <tr>
+          <td>JUPITER ASCENDING</td>
+          <td>$8.99</td>
+        </tr>
+        <tr>
+          <td><hr></td>
+          <td><hr></td>
+        </tr>
+        <tr>
+          <td>TOTAL COST</td>
+          <!-- <td>${{ order.total }}</td> -->
+          <td>$15.98</td>
+        </tr>
+      </table>
+      <div class="admin-order-address">
+        <!-- <p>{{ order.customer.full_name }}<br>
+        {{ order.customer.address_line_1 }}<br>
+        {{ order.customer.address_line_2 }}<br>
+        {{ order.customer.city }}, {{ order.customer.zip_number }}<br>
+        {{ order.customer.country }}<br>
+        E-MAIL: {{ order.customer.email }}</p> -->
+        <p>Josh Short<br>
+        19 Whatlington Street<br>
+        <br>
+        Cottenham, CB4 9XJ<br>
+        United Kingdom<br>
+        E-MAIL: JoshShort@jourrapide.com</p>        
+      </div>
+      <button class="shipped" disabled>SHIPPED SUCCESSFULLY</button>
+      <hr>
+    </div>
+    <div class="admin-order-table">
+      <table class="admin-table">
+        <!-- {% for product in order %}
+        <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        </tr>
+        {% endfor %} -->
+        <tr>
+          <td>THE ANGRY BIRDS MOVIE</td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td>KRAMPUS</td>
+          <td>$8.99</td>
+        </tr>
+        <tr>
+          <td>JUPITER ASCENDING</td>
+          <td>$8.99</td>
+        </tr>
+        <tr>
+          <td>IN PURSUIT OF HAPPYNESS</td>
+          <td>$6.99</td>
+        </tr>
+        <tr>
+          <td>SUICIDE SQUAD</td>
+          <td>$11.99</td>
+        </tr>
+        <tr>
+          <td>ZOOTOPIA</td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td><hr></td>
+          <td><hr></td>
+        </tr>
+        <tr>
+          <td>TOTAL COST</td>
+          <!-- <td>${{ order.total }}</td> -->
+          <td>$56.94</td>
+        </tr>
+      </table>
+      <div class="admin-order-address">
+        <!-- <p>{{ order.customer.full_name }}<br>
+        {{ order.customer.address_line_1 }}<br>
+        {{ order.customer.address_line_2 }}<br>
+        {{ order.customer.city }}, {{ order.customer.zip_number }}<br>
+        {{ order.customer.country }}<br>
+        E-MAIL: {{ order.customer.email }}</p> -->
+        <p>G'Nara Toragh<br>
+        147 France Road<br>
+        Mahora<br>
+        Hastings, 4120<br>
+        New Zealand<br>
+        E-MAIL: GNaraToragh@rhyta.com</p>        
+      </div>
+      <button class="shipped" disabled>SHIPPED SUCCESSFULLY</button>
+      <hr>
+    </div>
+    <!-- {% endfor %} -->
+  </body>
+</html>

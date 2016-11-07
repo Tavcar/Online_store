@@ -3,7 +3,7 @@ from google.appengine.ext import ndb
 
 class Product(ndb.Model):
     name = ndb.StringProperty()
-    price = ndb.IntegerProperty()
+    price = ndb.FloatProperty()
     year = ndb.IntegerProperty()
     genre = ndb.StringProperty(choices=('Horror', 'Action', 'Comedy', 'Drama', 'Thriller', 'Animated')) #dodaj se druge ce treba
     image = ndb.StringProperty()
