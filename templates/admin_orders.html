@@ -37,8 +37,8 @@
           <td>$9.99</td>
         </tr>
         <tr>
-          <td>ETERNAL SUNSHINE OF A SPOTLESS MIND</td>
-          <td>$9.99</td>
+          <td><hr></td>
+          <td><hr></td>
         </tr>
         <tr>
           <td>TOTAL COST</td>
@@ -60,37 +60,71 @@
         United States of America<br>
         E-MAIL: mcfadden@fakemail.com</p>        
       </div>
-      
-      
+      <a href="/shipping/{{ order.key.id() }}">
+        <button>SHIP IT</button>
+      </a>
+      <hr>
+    </div>
+    <div class="admin-order-table">
+      <table class="admin-table">
+        <tr>
+          <td>JUPITER ASCENDING</td>
+          <td>$7.99</td>
+        </tr>
+        <tr>
+          <td><hr></td>
+          <td><hr></td>
+        </tr>
+        <tr>
+          <td>TOTAL COST</td>
+          <td>$7.99</td>
+        </tr>
+      </table>
+      <div class="admin-order-address">
+        <p>Joseph Stevenson<br>
+        1465 Godfrey Street<br>
+        <br>
+        Newberg, OR 97132<br>
+        United States of America<br>
+        E-MAIL: JosephEStevenson@armyspy.com </p>        
+      </div>
+      <a href="/shipping/{{ order.key.id() }}">
+        <button>SHIP IT</button>
+      </a>
+      <hr>
+    </div>
+<div class="admin-order-table">
+      <table class="admin-table">
+        <tr>
+          <td>ZOOTOPIA</td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td>THE ANGRY BIRDS MOVIE</td>
+          <td>$10.99</td>
+        </tr>
+        <tr>
+          <td><hr></td>
+          <td><hr></td>
+        </tr>
+        <tr>
+          <td>TOTAL COST</td>
+          <td>$20.98</td>
+        </tr>
+      </table>
+      <div class="admin-order-address">
+        <p>Karen C. McFadden<br>
+        3110 Ritter Street<br>
+        Apartment Nr. 14<br>
+        Huntsville, AL 35816<br>
+        United States of America<br>
+        E-MAIL: mcfadden@fakemail.com</p>        
+      </div>
+      <a href="/shipping/{{ order.key.id() }}">
+        <button>SHIP IT</button>
+      </a>
+      <hr>
     </div>
     <!-- {% endfor %} -->
   </body>
 </html>
-    
-    
-    
-    
-<!-- 
-{% for order in history_list %}
-    <div class="uh-order">
-        <div class="uh-order-product">
-            {% for product in order %}
-                <p>{{ product.name }}   {{ product.price }} </p>
-            {% endfor %}
-        </div>
-        <p>{{ order.total }}</p>
-        <div class="uh-order-address">
-            <p>{{ order.customer.full_name }}{{ order.customer.email }}</p>
-            <p>{{ order.customer.address_line_1 }}, {{ order.customer.address_line_2 }}</p>
-            <p>{{ order.customer.zip_number}} {{ order.customer.city }}, {{ order.customer.country }}</p>
-            <p>Status: shipped-{{ order.shipped }}</p>
-            <div class="btn-group pull-right">
-                <a class="button-s" href="/shipping/{{ order.key.id() }}">Ship it</a>
-            </div>
-        </div>
-    </div>
-{% endfor %}
-
-
-</body>
-</html> -->
