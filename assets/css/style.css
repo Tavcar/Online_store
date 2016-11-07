@@ -377,4 +377,35 @@ table input {
     font-size: 1.4em;
     display: inline-block;
     text-align: center;
+    line-height: 1.4em;
+}
+
+.admin-order-table button {
+    height: 2em;
+    width: 10em;
+    float: right;
+    margin-top: 1em;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* ADMIN_ORDERS_SHIPPED.HTML */
+.admin-order-table .shipped {
+    font-size: 3em;
+    height: 2.5em;
+}
+
+/* ADMIN_ORDERS_SHIPPING.HTML */
+#are-you-sure {
+    text-align: center;
+    font-size: 2em;
+}
+
+#confirm-shipment {
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: bold;
+    width: 10em;
+    height: 2em;
 }
