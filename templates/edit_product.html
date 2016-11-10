@@ -6,11 +6,13 @@
   </head>
   <body id="new-product">
     <div id="top">
+      <button class="top-button">MAIN PAGE</button>
       <button class="top-button">ADMIN DASHBOARD</button>
       <button class="top-button">MANAGING ORDERS</button>
     </div>
-    <br><br><br>    
-    <h2>EDIT PRODUCT</h2>
+    <br><br>
+    <h1>EDIT PRODUCT</h1>
+    <hr>
     <form action="/edit-product/{{ product.key.id() }}" method="post" id="new-product">
       <div class="info-holder">
         <p>Name: <br> <input name="name" value="{{ product.name }}" maxlength="35" required></p>
