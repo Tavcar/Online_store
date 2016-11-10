@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>New Product</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+  </head>
+  <body id="new-product">
+    <div id="top">
+      <button class="top-button">MAIN PAGE</button>
+      <button class="top-button">ADMIN DASHBOARD</button>
+      <button class="top-button">MANAGING ORDERS</button>
+    </div>
+    <br><br>
+    <h1>ADD NEW PRODUCT</h1>
+    <hr>
+    <form action="/add-product" method="post" id="new-product">
+      <div class="info-holder">
+        <p>Name: <br> <input name="name" placeholder="ex: Movie Title" maxlength="35" required></p>
+        <p>Year: <br> <input name="year" placeholder="ex: 1997" maxlength="4" required></p>
+        <p>Genre: <br> <input name="genre" placeholder="ex: action" required></p>
+        <p>Price (in dollars): <br> <input name="price" placeholder="ex: 7.99" maxlength="7" required></p>
+        <p>Image URL Path: <br> <input name="image" placeholder="ex: /assets/images/movie_image.png" required></p>
+      </div>
+      <div class="info-holder">
+        <p>Description: <br> <textarea name="text" placeholder="ex: Young magician wakes up only to realize that the princess of a kingdom has been abducted." maxlength="720" required>The synopsis is currently unavailable.</textarea></p>
+      </div>
+      <br><br>
+      <button id="submit" type="submit">ADD PRODUCT</button>
+    </form>
+    <br><br>
+</body>
+</html>
