@@ -2,7 +2,7 @@
 import os
 import jinja2
 import webapp2
-from models.order import Order
+from models.user import Customer
 from models.product import Product
 from google.appengine.api import users
 from admins import ADMIN
@@ -36,9 +36,18 @@ class BaseHandler(webapp2.RequestHandler):
             logout_url = users.create_logout_url('/')
             params["logout_url"] = logout_url
             params["logiran"] = logiran
+
             if user.nickname() in ADMIN:
                 user.admin = True
-            return self.response.out.write(template.render(params))
+
+            customer = Customer.query(Customer.email == user.email()).get()
+            if customer:
+                return self.response.out.write(template.render(params))
+
+            else:
+                customer = Customer(email=user.email())
+                customer.put()
+                return self.response.out.write(template.render(params))
 
         else:
             logiran = False
@@ -47,9 +56,17 @@ class BaseHandler(webapp2.RequestHandler):
             params["logiran"] = logiran
             return self.response.out.write(template.render(params))
 
-
 class MainHandler(BaseHandler):
+
     def get(self):
+        user = users.get_current_user()
+        list = Product.query().fetch()
+        params = {"list": list}
+
+        return self.render_template("home.html", params=params)
+
+    def post(self):
+        user = users.get_current_user()
         list = Product.query().fetch()
         params = {"list": list}
 
