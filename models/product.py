@@ -5,10 +5,9 @@ class Product(ndb.Model):
     name = ndb.StringProperty()
     price = ndb.FloatProperty()
     year = ndb.IntegerProperty()
-    genre = ndb.StringProperty(choices=('Horror', 'Action', 'Comedy', 'Drama', 'Thriller', 'Animated')) #dodaj se druge ce treba
+    genre = ndb.StringProperty()
     image = ndb.StringProperty()
     text = ndb.TextProperty()
-    orders = ndb.KeyProperty(kind="Order", repeated=True) #za tole bo treba se probat, tako da nisem 100%
 
 
     @classmethod
