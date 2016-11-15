@@ -1,15 +1,20 @@
 from handlers.basic_handlers import BaseHandler
 from models.order import Order
 from decorators.login import admin_required
+from operator import attrgetter
 
 
-class OrdersHandler(BaseHandler):
-    @admin_required
+class OrderListHandler(BaseHandler):
+
     def get(self):
-        orders_list = Order.query(Order.completed == True).fetch()
-        params = {"orders_list": orders_list}
+        orders = Order.query(Order.completed == True).fetch()
+        orders_list = sorted(orders, key=attrgetter("date"), reverse=True)
 
-        return self.render_template("history.html", params=params)
+        for order in orders_list:
+            products = order.products
+            params = {"orders": orders_list, "products": products}
+
+            return self.render_template("order-list.html", params=params)
 
 
 class ShippingOrderHandler(BaseHandler):
