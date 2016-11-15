@@ -1,7 +1,7 @@
 from google.appengine.ext import ndb
 
 
-class User(ndb.Model):
+class Customer(ndb.Model):
     email = ndb.StringProperty()
     full_name = ndb.StringProperty()
     address_line_1 = ndb.StringProperty()
@@ -10,10 +10,3 @@ class User(ndb.Model):
     state = ndb.StringProperty()
     zip_number = ndb.IntegerProperty()
     country = ndb.StringProperty()
-
-    @classmethod
-    def create(cls, email, full_name, address_line_1, address_line_2, city, state, zip_number, country):
-        user = cls(email=email, full_name=full_name, address_line_1=address_line_1,
-                   address_line_2=address_line_2, city=city, state=state, zip_number=zip_number, country=country)
-        user.put()
-        return user
