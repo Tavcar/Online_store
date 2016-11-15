@@ -1,6 +1,8 @@
 from handlers.basic_handlers import BaseHandler
 from models.product import Product
 from decorators.login import admin_required
+from models.order import Order
+from google.appengine.api import users
 
 
 class AddProductHandler(BaseHandler):
@@ -63,8 +65,30 @@ class DeleteProductHandler(BaseHandler):
 
 
 class ProductHandler(BaseHandler):
-
     def get(self, product_id):
         product = Product.get_by_id(int(product_id))
         params = {"product": product}
         return self.render_template("product.html", params=params)
+
+    def post(self, product_id):
+        user = users.get_current_user()
+        product = Product.get_by_id(int(product_id))
+        email = user.email()
+        order = Order.query(Order.email == user.email(), Order.completed == False).get()
+
+        if order:
+            if product.name in order.products:
+                return self.redirect_to("home")
+
+            else:
+                order.products += [Product(name=product.name, price=product.price, year=product.year,
+                                           genre=product.genre, image=product.image, text=product.text)]
+                order.put()
+                return self.redirect_to("cart")
+
+        else:
+            order = Order(email=email, products=[Product(name=product.name, price=product.price,
+                                                         year=product.year, genre=product.genre,
+                                                         image=product.image, text=product.text)])
+            order.put()
+            return self.redirect_to("cart")
