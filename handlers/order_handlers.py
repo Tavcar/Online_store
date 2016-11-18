@@ -26,7 +26,8 @@ class CartHandler(BaseHandler):
         order = Order.query(Order.email == user.email(), Order.completed == False).get()
 
         delete = self.request.get("delete")
-        order.products = [i for i in order.products if i.name != delete]
+        a = [i for i in order.products if i.name == delete][0]
+        order.products.remove(a)
         order.put()
 
         return self.redirect("cart")
