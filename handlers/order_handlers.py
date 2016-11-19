@@ -3,6 +3,7 @@ from models.order import Order
 from google.appengine.api import users
 from models.user import Customer
 from datetime import datetime
+from google.appengine.api import mail
 
 
 
@@ -85,6 +86,18 @@ class CheckoutHandler(BaseHandler):
         user = users.get_current_user()
         date = datetime.now().strftime("%d-%m-%Y at %H.%M.%S")
         order = Order.query(Order.email == user.email(), Order.completed == False).get()
+
+        message = mail.EmailMessage()
+        message.sender = "blurtz@gmail.com"
+        message.to = user.email()
+        message.subject = "We have received your order"
+        message.body = "Hello, " + order.full_name + '\n''\n' \
+                       "Thank you for your order." '\n''\n' \
+                       "Total: " + str(order.total) + " EUR" + '\n' \
+                       "Your order:" '\n' + "" '\n'.join([str(i.name) for i in order.products]) \
+
+        message.send()
+
         order.date = date
         order.completed = True
         order.put()
