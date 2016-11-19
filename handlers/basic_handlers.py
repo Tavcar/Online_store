@@ -6,6 +6,7 @@ from models.user import Customer
 from models.product import Product
 from google.appengine.api import users
 from admins import ADMIN
+from google.appengine.api import mail
 
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
@@ -47,6 +48,14 @@ class BaseHandler(webapp2.RequestHandler):
             else:
                 customer = Customer(email=user.email())
                 customer.put()
+
+                message = mail.EmailMessage()
+                message.sender = "Blurtz@gmail.com"
+                message.to = user.email()
+                message.subject = "Welcome to Blurtz!"
+                message.body = "Thank you for joining Blurtz."
+                message.send()
+
                 return self.response.out.write(template.render(params))
 
         else:
