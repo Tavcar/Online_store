@@ -17,9 +17,9 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/user', UserHandler, name="user"),
     webapp2.Route('/edit-product/<product_id:\d+>', EditProductHandler),
     webapp2.Route('/delete-product/<product_id:\d+>', DeleteProductHandler),
-    webapp2.Route('/completed', OrderListHandler),
-    webapp2.Route('/shipped', ShippedOrdersHandler),
-    webapp2.Route('/shipping/<order_id:\d+>', ShippingOrderHandler),
+    webapp2.Route('/order-list', OrderListHandler),
+    webapp2.Route('/shipped-orders', ShippedOrdersHandler, name="shipped"),
+    webapp2.Route('/order-list/<order_id:\d+>', ShippingOrderHandler),
 ], debug=True)
 
 

@@ -72,11 +72,11 @@ class MainHandler(BaseHandler):
         list = Product.query().fetch()
         params = {"list": list}
 
-        return self.render_template("home.html", params=params)
+        return self.render_template("index.html", params=params)
 
     def post(self):
         user = users.get_current_user()
         list = Product.query().fetch()
         params = {"list": list}
 
-        return self.render_template("home.html", params=params)
+        return self.render_template("index.html", params=params)

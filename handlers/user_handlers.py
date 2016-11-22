@@ -15,7 +15,7 @@ class HistoryHandler(BaseHandler):
             products = order.products
             params = {"orders": orders, "products": products, "user": user}
 
-            return self.render_template("history.html", params=params)
+            return self.render_template("user_history.html", params=params)
 
 
 class UserHandler(BaseHandler):
@@ -25,7 +25,7 @@ class UserHandler(BaseHandler):
 
         params = {"customer": customer}
 
-        return self.render_template("user.html", params=params)
+        return self.render_template("user_page.html", params=params)
 
     def post(self):
         user = users.get_current_user()
