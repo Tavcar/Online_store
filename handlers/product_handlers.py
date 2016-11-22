@@ -8,7 +8,7 @@ from google.appengine.api import users
 class AddProductHandler(BaseHandler):
     @admin_required
     def get(self):
-        return self.render_template("add-product.html")
+        return self.render_template("add_product.html")
 
     @admin_required
     def post(self):
@@ -29,7 +29,7 @@ class EditProductHandler(BaseHandler):
     def get(self, product_id):
         product = Product.get_by_id(int(product_id))
         params = {"product": product}
-        return self.render_template("edit-product.html", params=params)
+        return self.render_template("edit_product.html", params=params)
 
     @admin_required
     def post(self, product_id):
@@ -55,7 +55,7 @@ class DeleteProductHandler(BaseHandler):
     def get(self, product_id):
         product = Product.get_by_id(int(product_id))
         params = {"product": product}
-        return self.render_template("delete-product.html", params=params)
+        return self.render_template("delete_product.html", params=params)
 
     @admin_required
     def post(self, product_id):
@@ -68,7 +68,7 @@ class ProductHandler(BaseHandler):
     def get(self, product_id):
         product = Product.get_by_id(int(product_id))
         params = {"product": product}
-        return self.render_template("product.html", params=params)
+        return self.render_template("movie_description.html", params=params)
 
     def post(self, product_id):
         user = users.get_current_user()

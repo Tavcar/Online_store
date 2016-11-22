@@ -6,7 +6,6 @@ from datetime import datetime
 from google.appengine.api import mail
 
 
-
 class CartHandler(BaseHandler):
     def get(self):
         user = users.get_current_user()

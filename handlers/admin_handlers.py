@@ -7,14 +7,14 @@ from operator import attrgetter
 class OrderListHandler(BaseHandler):
 
     def get(self):
-        orders = Order.query(Order.completed == True).fetch()
+        orders = Order.query(Order.completed == True, Order.shipped == False).fetch()
         orders_list = sorted(orders, key=attrgetter("date"), reverse=True)
 
         for order in orders_list:
             products = order.products
             params = {"orders": orders_list, "products": products}
 
-            return self.render_template("order-list.html", params=params)
+            return self.render_template("admin_orders.html", params=params)
 
 
 class ShippingOrderHandler(BaseHandler):
@@ -22,7 +22,7 @@ class ShippingOrderHandler(BaseHandler):
     def get(self, order_id):
         order = Order.get_by_id(int(order_id))
         params = {"order": order}
-        return self.render_template("shipping.html", params=params)
+        return self.render_template("admin_orders_shipping.html", params=params)
 
     @admin_required
     def post(self, order_id):
@@ -30,7 +30,7 @@ class ShippingOrderHandler(BaseHandler):
         order.shipped = True
         order.put()
 
-        return self.redirect("shipped.html")
+        return self.redirect_to("shipped")
 
 
 class ShippedOrdersHandler(BaseHandler):
@@ -39,4 +39,4 @@ class ShippedOrdersHandler(BaseHandler):
         shipped_list = Order.query(Order.shipped == True).fetch()
         params = {"shipped_list": shipped_list}
 
-        return self.render_template("shipped.html", params=params)
+        return self.render_template("admin_orders_shipped.html", params=params)
